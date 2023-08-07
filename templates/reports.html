@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<link rel="stylesheet" href="../static/files/css/bootstrap.css">
+<script src="../static/files/js/bootstrap.js"></script>
+
+</head>
+<body>
+    <div class="container bg-success p-2 m-2">
+        <table class="table table-primary table-striped">
+            <tr>
+                <th>FORM ID</th>
+                <th>ALLERGIES</th>
+                <th> SPECIAL CONDITIONS</th>
+                <th>IMMUNIZATION MISSED</th>
+                <th>AGE OF PREGNANCY</th>
+                <th>AGE OF DESEASED</th>
+                <th>CAUSE OF DEATH</th>
+                <th>NUMBER OF  WATER FACILITIES</th>
+                <th> NUMBER OF FUNCTIONAL LATRINES</th>
+                <th> LINKED HEATH FACILITYIES</th>
+            </tr>
+
+
+            {% for report in reports%}
+            <tr>
+                <td>{{report[0]}}</td>
+                <td>{{report[1]}}</td>
+                <td>{{report[2]}}</td>
+                <td>{{report[3]}}</td>
+                <td>{{report[4]}}</td>
+                <td>{{report[5]}}</td>
+                <td>{{report[6]}}</td>
+                <td>{{report[7]}}</td>
+                <td>{{report[8]}}</td>
+                <td>{{report[9]}}</td>
+            </tr>
+            {% endfor %}
+
+
+        </table>
+
+    </div>
+    
+</body>
+</html>
